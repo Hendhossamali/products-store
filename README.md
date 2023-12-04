@@ -1,2 +1,26 @@
 # products-store
 using angular and concept of data binding
+#In an Angular template, 
+a binding creates a live connection between a part of the UI created from a template (a DOM element, directive, or component) and the model (the component instance to which the template belongs). This connection can be used to synchronize the view with the model, to notify the model when an event or user action takes place in the view, or both. Angular's Change Detection algorithm is responsible for keeping the view and the model in sync.
+
+Examples of binding include:
+
+1)text interpolations
+2)property binding
+3)event binding
+4)two-way binding
+
+##Text Interpolation
+Interpolation refers to embedding expressions into marked up text. By default, interpolation uses the double curly braces {{ and }} as delimiters
+##property binding
+Property binding in Angular helps you set values for properties of HTML elements or directives. Use property binding to do things such as toggle button features, set paths programmatically, and share values between components.
+##event binding
+Event binding lets you listen for and respond to user actions such as keystrokes, mouse movements, clicks, and touches.
+
+To bind to an event you use the Angular event binding syntax. This syntax consists of a target event name within parentheses to the left of an equal sign, and a quoted template statement to the right.
+
+Create the following example; the target event name is click and the template statement is onSave()
+
+##two-way binding
+Two-way binding combines property binding with event binding.
+Angular's two-way binding syntax is a combination of square brackets and parentheses, [()]. The [()] syntax combines the brackets of property binding, [], with the parentheses of event binding, (), as follows
