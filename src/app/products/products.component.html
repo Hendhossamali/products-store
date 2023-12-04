@@ -1,0 +1,32 @@
+<div class="container">
+  @if(products.length !=0){
+  <div class="row">
+    @for(product of products ; track product.id){
+    <div class="col-4">
+      <div class="card" style="width:400px">
+        <img class="card-img-top" [src]="product.photo" [alt]="product.title">
+        <div class="card-body">
+          <h4 class="card-title">{{product.title}}</h4>
+          <p class="card-text">{{product.price}}EGP
+          @switch (product.color) {
+            @case ("red") {
+              <b class="text-danger">Red</b>
+            }
+            @case ("blue") {
+              <b class="text-primary">Blue</b>
+            }
+            @default {
+              <div>Mixed Color</div>}
+          }
+          </p>
+          <a href="#" class="btn btn-primary">See Product</a>
+        </div>
+      </div>
+    </div>
+  } @empty {
+    <p class="text-danger h4 py-4">No Products Founds!</p>
+  }
+  </div>
+}
+
+</div>
