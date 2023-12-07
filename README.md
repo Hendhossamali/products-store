@@ -23,4 +23,18 @@ Create the following example; the target event name is click and the template st
 
 ##two-way binding
 Two-way binding combines property binding with event binding.
-Angular's two-way binding syntax is a combination of square brackets and parentheses, [()]. The [()] syntax combines the brackets of property binding, [], with the parentheses of event binding, (), as follows
+Angular's two-way binding syntax is a combination of square brackets and parentheses, [()]. The [()] syntax combines the brackets of property binding, [], with the parentheses of event binding, ().
+
+###Use Angular's built-in directives to manage forms, lists, styles, and what users see.
+
+The different types of Angular directives are as follows:
+1)Components:	Used with a template. This type of directive is the most common directive type.
+2)Attribute directives:	Change the appearance or behavior of an element, component, or another directive.
+3)Structural directives:	Change the DOM layout by adding and removing DOM elements.
+
+The most common attribute directives are as follows:
+
+Common directives	Details:-
+[NgClass]	Adds and removes a set of CSS classes.
+[NgStyle]	Adds and removes a set of HTML styles.
+[NgModel]	Adds two-way data binding to an HTML form element.
