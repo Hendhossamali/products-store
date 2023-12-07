@@ -1,6 +1,8 @@
 <div class="container">
   <h1 [ngClass]="classPageTitle">Products List</h1>
   <h2 [ngStyle]="stylePageTitle">Latest Product</h2>
+  <h2>{{mainThemecolor}}</h2>
+  <input id="example" [(ngModel)]="mainThemecolor">
   @if(products.length !=0){
   <div class="row">
     @for(product of products ; track product.id){
