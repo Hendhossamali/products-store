@@ -1,4 +1,6 @@
 <div class="container">
+  <h1 [ngClass]="classPageTitle">Products List</h1>
+  <h2 [ngStyle]="stylePageTitle">Latest Product</h2>
   @if(products.length !=0){
   <div class="row">
     @for(product of products ; track product.id){
