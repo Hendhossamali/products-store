@@ -15,9 +15,10 @@ export class ProductsComponent {
     'margin':'20px'
   }
   mainThemecolor:string='Green';
+  isLoggedIn:boolean=true;
  products =[
   {  id:1,
-    title:"glass",
+   title:"glass",
     price:100,
     color:"black",
     discount: 10,
@@ -26,14 +27,14 @@ export class ProductsComponent {
  {  id:2,
   title:"table",
   price:100,
-  color:"blue",
+  color:"Green",
   discount: 10,
   photo:"../assets/products/product-2.avif",
 },
 {  id:3,
   title:"shose",
   price:100,
-  color:"red",
+  color:"Red",
   discount: 10,
   photo:"../assets/products/product-3.avif",
 },

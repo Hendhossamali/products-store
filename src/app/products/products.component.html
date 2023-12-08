@@ -1,36 +1,55 @@
+<!-- header -->
+<div class="container">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+      <span class="fs-4">Products store</span>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+    </ul>
+  </header>
+</div>
+<!-- <products page -->
 <div class="container">
   <h1 [ngClass]="classPageTitle">Products List</h1>
   <h2 [ngStyle]="stylePageTitle">Latest Product</h2>
   <h2>{{mainThemecolor}}</h2>
   <input id="example" [(ngModel)]="mainThemecolor">
-  @if(products.length !=0){
-  <div class="row">
-    @for(product of products ; track product.id){
-    <div class="col-4">
+  <div class="row" *ngIf="isLoggedIn">
+    <div class="col-4" *ngFor="let product of products">
       <div class="card" style="width:400px">
         <img class="card-img-top" [src]="product.photo" [alt]="product.title">
         <div class="card-body">
           <h4 class="card-title">{{product.title}}</h4>
           <p class="card-text">{{product.price}}EGP
-          @switch (product.color) {
-            @case ("red") {
-              <b class="text-danger">Red</b>
-            }
-            @case ("blue") {
-              <b class="text-primary">Blue</b>
-            }
-            @default {
-              <div>Mixed Color</div>}
-          }
-          </p>
+           </p>
+           <div [ngSwitch]="product.color">
+                <p *ngSwitchCase="'Red'" class="text-danger">Red</p>
+                <p *ngSwitchCase="'Green'" class="text-success">Green</p>
+                <p *ngSwitchDefault>Other color</p>
+           </div>
           <a href="#" class="btn btn-primary">See Product</a>
         </div>
       </div>
     </div>
-  } @empty {
-    <p class="text-danger h4 py-4">No Products Founds!</p>
-  }
   </div>
-}
-
+</div>
+<!-- footer -->
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">&copy; 2023 Company, Inc</p>
+  </footer>
 </div>
