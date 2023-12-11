@@ -18,8 +18,9 @@
 <!-- <products page -->
 <div class="container">
   <h1 [ngClass]="classPageTitle">Products List</h1>
-  <h2 [ngStyle]="stylePageTitle">Latest Product</h2>
+  <h2 [ngStyle]="stylePageTitle">Latest Product {{todayDate | date}}</h2>
   <h2>{{mainThemecolor}}</h2>
+  {{personWeight | number}}
   <input id="example" [(ngModel)]="mainThemecolor">
   <div class="row" *ngIf="isLoggedIn">
     <div class="col-4" *ngFor="let product of products">

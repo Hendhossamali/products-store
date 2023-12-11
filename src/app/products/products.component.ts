@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
+    todayDate = new Date() ;
+    personWeight =100.5;
+
   classPageTitle: string="text-center";
   stylePageTitle={
     'color':'red',
